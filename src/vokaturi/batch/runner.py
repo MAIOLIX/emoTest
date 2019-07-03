@@ -8,9 +8,12 @@ import os
 
 if __name__ == '__main__':
     v=VokaturiHelper()
-    basePath='c:/progetti/emovo/rabbia'
+    basePath='c:/progetti/emovo/gioia'
     print(v.analyzeEmotion("cliente1.wav"))
     listaFile=os.listdir(basePath)
+    fileOutput=open('c:/progetti/vokaturi.txt','a')
     for pippo in listaFile:
         filePath=basePath+'/'+pippo
-        print(v.analyzeEmotion(filePath))
+        result=v.analyzeEmotion(filePath)
+        fileOutput.write(result+'\n')
+    fileOutput.close()
