@@ -23,6 +23,7 @@ class VokaturiHelper(object):
     def getOS(self):
         print ("Analyzed by: %s" % Vokaturi.versionAndLicense())
     
+   
     def analyzeEmotion(self,filePath):
         (sample_rate,samples)=wavfile.read(filePath)
         print ("   sample rate %.3f Hz" % sample_rate)
